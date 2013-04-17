@@ -13,10 +13,11 @@ Requirements
 
 Usage
 -----
+Modify ``foobar2000_sdk\CMakeLists.txt`` to add additional components to compile and install.
 ::
 
 	mkdir build-fb2k
 	cd build-fb2k
 	cmake -G "Visual Studio 11" -T v110_xp ..\foobar2000_sdk
 
-Modify ``foobar2000_sdk\CMakeLists.txt`` to add additional components to compile and install.
+Components will be installed into ``build-fb2k/portable/user-components``, making ``build-fb2k/portable`` an excellent place to install a portable foobar2000 installation.
