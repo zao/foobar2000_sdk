@@ -52,5 +52,8 @@ macro(deploy_component target dir)
 	)
 endmacro()
 
-add_subdirectory(foo_sample)
-# add_subdirectory(foo_wave_seekbar)
+set(FB2K_COMPONENTS "" CACHE STRING "Semicolon separated list of component names")
+
+foreach(COMPONENT ${FB2K_COMPONENTS})
+    add_subdirectory(${COMPONENT})
+endforeach()
