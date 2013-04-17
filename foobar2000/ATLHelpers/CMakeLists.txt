@@ -1,0 +1,19 @@
+include_directories(${WTL_INCLUDE_DIRS})
+add_library(ATLHelpers STATIC
+	"ATLHelpers.h"
+	"AutoComplete.cpp"
+	"AutoComplete.h"
+	"BumpableElem.h"
+	"CDialogResizeHelper.cpp"
+	"CDialogResizeHelper.h"
+	"CMakeLists.txt"
+	"GDIUtils.h"
+	"inplace_edit.cpp"
+	"inplace_edit.h"
+	"inplace_edit_v2.cpp"
+	"inplace_edit_v2.h"
+	"misc.cpp"
+	"misc.h"
+	"stdafx.h"
+	"WindowPositionUtils.h"
+)

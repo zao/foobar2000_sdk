@@ -1,0 +1,21 @@
+#include_directories(${WTL_INCLUDE_DIRS})
+add_library(columns_ui-sdk STATIC
+	"base.h"
+	"buttons.h"
+	"columns_ui.cpp"
+	"columns_ui.h"
+	"columns_ui_appearance.h"
+	"helpers.h"
+	"imp_helper.h"
+	"menu.h"
+	"splitter.h"
+	"ui_extension.cpp"
+	"ui_extension.h"
+	"visualisation.h"
+	"win32_helpers.cpp"
+	"win32_helpers.h"
+	"window.h"
+	"window_helper.cpp"
+	"window_helper.h"
+	"window_host.h"
+)
