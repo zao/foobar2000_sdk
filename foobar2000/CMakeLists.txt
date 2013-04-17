@@ -53,4 +53,4 @@ macro(deploy_component target dir)
 endmacro()
 
 add_subdirectory(foo_sample)
-add_subdirectory(foo_wave_seekbar)
+# add_subdirectory(foo_wave_seekbar)
