@@ -41,7 +41,7 @@ find_package(BOOST 1.53)
 set(DXSDK_INCLUDE_DIRS "$ENV{DXSDK_FEB10}include/")
 set(DXSDK_LIBRARY_DIRS "$ENV{DXSDK_FEB10}lib/x86/")
 set(TBB_INCLUDE_DIRS "$ENV{TBBROOT}include/")
-set(TBB_LIBRARY_DIRS "$ENV{TBBROOT}lib/ia32/vc10/")
+set(TBB_LIBRARY_DIRS "$ENV{TBBROOT}build/windows_ia32_cl_v110_xp_debug/" "$ENV{TBBROOT}build/windows_ia32_cl_v110_xp_release/")
 
 macro(deploy_component target dir)
 	add_custom_command(TARGET ${target} POST_BUILD
