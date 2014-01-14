@@ -15,6 +15,8 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 #     endif()
 # endforeach(flag_var)
 
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/atl/include")
+link_directories("${CMAKE_CURRENT_SOURCE_DIR}/atl/lib")
 add_subdirectory(wtl)
 add_subdirectory(pfc)
 add_subdirectory(foobar2000)
