@@ -19,8 +19,6 @@ if(${FB2K_STATIC_RUNTIME})
     endforeach(flag_var)
 endif()
 
-include_directories("${CMAKE_CURRENT_SOURCE_DIR}/atl/include")
-link_directories("${CMAKE_CURRENT_SOURCE_DIR}/atl/lib")
 add_subdirectory(wtl)
 add_subdirectory(pfc)
 add_subdirectory(foobar2000)
