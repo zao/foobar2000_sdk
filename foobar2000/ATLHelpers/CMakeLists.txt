@@ -16,4 +16,5 @@ add_library(ATLHelpers STATIC
 	"misc.h"
 	"stdafx.h"
 	"WindowPositionUtils.h"
+	"WTL-PP.h"
 )
