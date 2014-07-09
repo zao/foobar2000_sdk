@@ -60,6 +60,7 @@ namespace pfc {
 
 	template<> class traits_t<char> : public traits_rawobject {};
 	template<> class traits_t<unsigned char> : public traits_rawobject {};
+	template<> class traits_t<signed char> : public traits_rawobject {};
 	template<> class traits_t<wchar_t> : public traits_rawobject {};
 	template<> class traits_t<short> : public traits_rawobject {};
 	template<> class traits_t<unsigned short> : public traits_rawobject {};
