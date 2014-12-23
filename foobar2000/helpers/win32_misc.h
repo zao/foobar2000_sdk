@@ -215,7 +215,10 @@ unsigned QueryScreenDPI();
 SIZE QueryScreenDPIEx();
 
 static WORD GetOSVersion() {
+#pragma warning(push)
+#pragma warning(disable: 4996)
 	const DWORD ver = GetVersion();
+#pragma warning(pop)
 	return (WORD)HIBYTE(LOWORD(ver)) | ((WORD)LOBYTE(LOWORD(ver)) << 8);
 }
 

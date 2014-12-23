@@ -107,7 +107,10 @@ void GetOSVersionStringAppend(pfc::string_base & out) {
 	if (FetchWineInfoAppend(out)) return;
 
 	OSVERSIONINFO ver = {}; ver.dwOSVersionInfoSize = sizeof(ver);
+#pragma warning(push)
+#pragma warning(disable: 4996)
 	WIN32_OP( GetVersionEx(&ver) );
+#pragma warning(pop)
 	SYSTEM_INFO info = {};
 	GetNativeSystemInfo(&info);
 	

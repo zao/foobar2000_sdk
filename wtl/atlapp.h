@@ -501,7 +501,10 @@ inline bool AtlIsOldWindows()
 {
 	OSVERSIONINFO ovi = { 0 };
 	ovi.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
+#pragma warning(push)
+#pragma warning(disable: 4996)
 	BOOL bRet = ::GetVersionEx(&ovi);
+#pragma warning(pop)
 	return (!bRet || !((ovi.dwMajorVersion >= 5) || (ovi.dwMajorVersion == 4 && ovi.dwMinorVersion >= 90)));
 }
 
@@ -610,7 +613,10 @@ namespace RunTimeHelper
 	inline bool IsVista()
 	{
 		OSVERSIONINFO ovi = { sizeof(OSVERSIONINFO) };
+#pragma warning(push)
+#pragma warning(disable: 4996)
 		BOOL bRet = ::GetVersionEx(&ovi);
+#pragma warning(pop)
 		return ((bRet != FALSE) && (ovi.dwMajorVersion >= 6));
 	}
 
@@ -645,7 +651,10 @@ namespace RunTimeHelper
 	inline bool IsWin7()
 	{
 		OSVERSIONINFO ovi = { sizeof(OSVERSIONINFO) };
+#pragma warning(push)
+#pragma warning(disable: 4996)
 		BOOL bRet = ::GetVersionEx(&ovi);
+#pragma warning(pop)
 		return ((bRet != FALSE) && (ovi.dwMajorVersion == 6) && (ovi.dwMinorVersion >= 1));
 	}
 
