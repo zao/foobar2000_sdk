@@ -44,13 +44,20 @@ set(DXSDK_LIBRARY_DIRS "$ENV{DXSDK_FEB10}lib/x86/")
 set(TBB_INCLUDE_DIRS "$ENV{TBBROOT}include/")
 set(TBB_LIBRARY_DIRS "$ENV{TBBROOT}build/windows_ia32_cl_v110_xp_debug/" "$ENV{TBBROOT}build/windows_ia32_cl_v110_xp_release/")
 
-macro(deploy_component target dir)
+macro(deploy_component target component)
 	add_custom_command(TARGET ${target} POST_BUILD
 		COMMAND ${CMAKE_COMMAND} -E copy_directory
 		$<TARGET_FILE_DIR:${target}>
-		${USER_COMPONENTS_DIR}${dir}
-#		COMMENT "Copying to output directory"
+		${USER_COMPONENTS_DIR}${component}
 	)
+endmacro()
+
+macro(deploy_aux_directory target component src_dir)
+    add_custom_command(TARGET ${target} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${src_dir}
+        ${USER_COMPONENTS_DIR}${component}
+    )
 endmacro()
 
 set(FB2K_COMPONENTS "" CACHE STRING "Semicolon separated list of component names")
