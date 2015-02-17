@@ -48,7 +48,6 @@ add_library(pfc STATIC
 	"selftest.cpp"
 	"sort.cpp"
 	"sort.h"
-	"stdafx.cpp"
 	"string8_impl.h"
 	"stringNew.cpp"
 	"stringNew.h"

@@ -92,6 +92,10 @@ static void RunTestCommand(metadb_handle_list_cref data) {
 		message << "Parameters:\n";
 		for(t_size walk = 0; walk < data.get_count(); ++walk) {
 			message << data[walk] << "\n";
+			metadb_handle_ptr meta = data[walk];
+			char const* volatile path = meta->get_path();
+			size_t volatile sub = meta->get_subsong_index();
+			message << path << "," << sub << "\n";
 		}
 	}	
 	popup_message::g_show(message, "Blah");

@@ -53,7 +53,6 @@ set(HELPERS_SOURCES
 	"ProfileCache.h"
 	"seekabilizer.cpp"
 	"seekabilizer.h"
-	"StdAfx.cpp"
 	"StdAfx.h"
 	"stream_buffer_helper.cpp"
 	"stream_buffer_helper.h"
