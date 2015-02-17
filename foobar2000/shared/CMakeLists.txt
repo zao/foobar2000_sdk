@@ -2,6 +2,7 @@ add_library(shared STATIC IMPORTED GLOBAL
 )
 add_library(shared-headers STATIC
 	"audio_math.h"
+	"fb2kdebug.h"
 	"filedialogs.h"
 	"shared.h"
 	"win32_misc.h"

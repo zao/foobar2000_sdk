@@ -6,7 +6,6 @@ add_library(ATLHelpers STATIC
 	"BumpableElem.h"
 	"CDialogResizeHelper.cpp"
 	"CDialogResizeHelper.h"
-	"CMakeLists.txt"
 	"GDIUtils.h"
 	"inplace_edit.cpp"
 	"inplace_edit.h"
@@ -14,6 +13,8 @@ add_library(ATLHelpers STATIC
 	"inplace_edit_v2.h"
 	"misc.cpp"
 	"misc.h"
+	"stdafx.cpp"
 	"stdafx.h"
 	"WindowPositionUtils.h"
+	"WTL-PP.h"
 )
