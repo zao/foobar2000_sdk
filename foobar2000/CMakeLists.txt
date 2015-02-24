@@ -1,4 +1,10 @@
-find_package(BOOST 1.53)
+if (DEFINED Boost_ADDITIONAL_VERSIONS)
+    set(Boost_ADDITIONAL_VERSIONS ${Boost_ADDITIONAL_VERSIONS} "1.57.0" "1.57")
+else()
+    set(Boost_ADDITIONAL_VERSIONS "1.57.0" "1.57")
+endif()
+
+find_package(BOOST 1.53 REQUIRED)
 
 # Instructs the MSVC toolset to use the precompiled header PRECOMPILED_HEADER
 # for each source file given in the collection named by SOURCE_VARIABLE_NAME.
