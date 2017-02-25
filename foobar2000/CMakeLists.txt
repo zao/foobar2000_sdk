@@ -38,15 +38,8 @@ add_subdirectory(columns_ui-sdk)
 
 find_package(BOOST 1.53)
 
-set(ASIO_ROOT "" CACHE FILEPATH "Locates an extracted or installed Asio tree")
-set(LIBUV_ROOT "" CACHE FILEPATH "Locates a libuv tree")
-set(ZEROMQ_ROOT "" CACHE FILEPATH "Locates a ZeroMQ tree")
-set(DXSDK_INCLUDE_DIRS "$ENV{DXSDK_FEB10}include/")
-set(DXSDK_LIBRARY_DIRS "$ENV{DXSDK_FEB10}lib/x86/")
-set(TBB_INCLUDE_DIRS "$ENV{TBBROOT}include/")
-set(TBB_LIBRARY_DIRS "$ENV{TBBROOT}build/windows_ia32_cl_v110_xp_debug/" "$ENV{TBBROOT}build/windows_ia32_cl_v110_xp_release/")
-set(LIBUV_INCLUDE_DIRS "${LIBUV_ROOT}/include")
-set(LIBUV_LIBRARY_DIRS "${LIBUV_ROOT}/lib")
+set(DXSDK_INCLUDE_DIRS "${DXSDK_ROOT}/include/")
+set(DXSDK_LIBRARY_DIRS "${DXSDK_ROOT}/lib/x86/")
 
 macro(deploy_component target dir)
 	add_custom_command(TARGET ${target} POST_BUILD

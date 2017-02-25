@@ -855,7 +855,7 @@ public:
 
     
 static void __cdecl _OverrideCrtAbort_handler(int signal) {
-	const ULONG_PTR args[] = {signal};
+	const ULONG_PTR args[] = {(ULONG_PTR)signal};
 	RaiseException(0x6F8E1DC8 /* random GUID */, EXCEPTION_NONCONTINUABLE, _countof(args), args);
 }
 
